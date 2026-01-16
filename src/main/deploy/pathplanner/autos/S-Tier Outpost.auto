@@ -7,19 +7,19 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Hub Start to Ideal Shooting Point"
+            "pathName": "Right Trench Start to Outpost"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Ideal Shooting Points to Right Neutral Zone"
+            "pathName": "Outpost to Right Scoring Point"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": null
+            "pathName": "Right Scoring Point to Right Tower"
           }
         }
       ]

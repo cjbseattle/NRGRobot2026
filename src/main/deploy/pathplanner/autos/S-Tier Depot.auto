@@ -7,19 +7,25 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Hub Start to Ideal Shooting Point"
+            "pathName": "Left Bump Start to Left Depot"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Ideal Shooting Points to Right Neutral Zone"
+            "pathName": "Left Depot to Right Depot"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": null
+            "pathName": "Right Depot to Left Scoring Point"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Left Scoring Point to Left Tower"
           }
         }
       ]

@@ -7,19 +7,25 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Left Trench Start to Depot"
+            "pathName": "Right Bump Start to Right Scoring Point"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Depot to Ideal Shooting Point"
+            "pathName": "Right Scoring Point to Outpost"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Ideal Shooting Point to Right Tower"
+            "pathName": "Outpost to Right Scoring Point"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Right Scoring Point to Right Tower"
           }
         }
       ]
