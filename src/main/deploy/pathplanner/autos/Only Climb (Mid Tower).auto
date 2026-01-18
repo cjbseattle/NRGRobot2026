@@ -7,19 +7,13 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Right Trench Start to Outpost"
+            "pathName": "Hub Start to Mid Tower"
           }
         },
         {
-          "type": "path",
+          "type": "named",
           "data": {
-            "pathName": "Outpost to Right Scoring Point"
-          }
-        },
-        {
-          "type": "path",
-          "data": {
-            "pathName": "Right Scoring Point to Right Tower"
+            "name": "Climb"
           }
         }
       ]

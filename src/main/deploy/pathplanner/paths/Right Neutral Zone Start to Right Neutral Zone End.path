@@ -3,29 +3,29 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 0.39803507646553826,
-        "y": 6.909510668552762
+        "x": 7.70632768361582,
+        "y": 1.25
       },
       "prevControl": null,
       "nextControl": {
-        "x": 0.3529661016898352,
-        "y": 5.726016949156349
+        "x": 7.70632768361582,
+        "y": 2.25
       },
       "isLocked": false,
-      "linkedName": "Left Depot"
+      "linkedName": "Right Neutral Zone Start"
     },
     {
       "anchor": {
-        "x": 0.39803507646553826,
-        "y": 5.098231255763185
+        "x": 7.706,
+        "y": 3.6
       },
       "prevControl": {
-        "x": 0.3980350764655381,
-        "y": 6.098231255763185
+        "x": 7.706,
+        "y": 2.049424770861655
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Right Depot"
+      "linkedName": "Right Neutral Zone End"
     }
   ],
   "rotationTargets": [],
@@ -34,8 +34,8 @@
   "eventMarkers": [
     {
       "name": "Intake",
-      "waypointRelativePos": 0.11655011655011666,
-      "endWaypointRelativePos": 0.8764568764568768,
+      "waypointRelativePos": 0.02331002331002327,
+      "endWaypointRelativePos": 1.0,
       "command": null
     }
   ],
@@ -49,13 +49,13 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": -90.0
+    "rotation": 90.0
   },
   "reversed": false,
   "folder": null,
   "idealStartingState": {
     "velocity": 0,
-    "rotation": -90.0
+    "rotation": 90.0
   },
   "useDefaultConstraints": true
 }

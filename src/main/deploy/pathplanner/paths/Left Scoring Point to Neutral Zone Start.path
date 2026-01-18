@@ -3,42 +3,40 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 0.39803507646553826,
-        "y": 6.909510668552762
+        "x": 2.6973305084745767,
+        "y": 4.713968926553673
       },
       "prevControl": null,
       "nextControl": {
-        "x": 0.3529661016898352,
-        "y": 5.726016949156349
+        "x": 2.556412429380501,
+        "y": 8.236920903957852
       },
       "isLocked": false,
-      "linkedName": "Left Depot"
+      "linkedName": "Left Scoring Point"
     },
     {
       "anchor": {
-        "x": 0.39803507646553826,
-        "y": 5.098231255763185
+        "x": 7.667895480227958,
+        "y": 6.8
       },
       "prevControl": {
-        "x": 0.3980350764655381,
-        "y": 6.098231255763185
+        "x": 4.759858757062148,
+        "y": 7.762923728813559
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Right Depot"
+      "linkedName": "Left Neutral Zone Start"
     }
   ],
-  "rotationTargets": [],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.545275590551181,
+      "rotationDegrees": -90.0
+    }
+  ],
   "constraintZones": [],
   "pointTowardsZones": [],
-  "eventMarkers": [
-    {
-      "name": "Intake",
-      "waypointRelativePos": 0.11655011655011666,
-      "endWaypointRelativePos": 0.8764568764568768,
-      "command": null
-    }
-  ],
+  "eventMarkers": [],
   "globalConstraints": {
     "maxVelocity": 3.0,
     "maxAcceleration": 3.0,
@@ -55,7 +53,7 @@
   "folder": null,
   "idealStartingState": {
     "velocity": 0,
-    "rotation": -90.0
+    "rotation": -17.764853300697496
   },
   "useDefaultConstraints": true
 }
