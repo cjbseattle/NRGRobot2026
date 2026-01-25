@@ -7,7 +7,19 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Right Hub Start to Right Scoring Point"
+            "pathName": "Left Trench Start to Left Depot"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Left Depot to Right Depot"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Right Depot to Left Scoring Point"
           }
         },
         {
@@ -19,19 +31,13 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Right Scoring Point to (Bump) Right Neutral Start"
+            "pathName": "Left Scoring Point to (Trench) Left Neutral Start"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Right Neutral Start to Right Neutral End"
-          }
-        },
-        {
-          "type": "path",
-          "data": {
-            "pathName": "Right Neutral End to (Bump) Right Scoring Point"
+            "pathName": "Left Neutral Start to Left Neutral End"
           }
         }
       ]
