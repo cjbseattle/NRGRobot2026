@@ -13,8 +13,11 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.Autos;
+import frc.robot.commands.DriveCommands;
 import frc.robot.commands.DriveUsingController;
+import frc.robot.commands.IntakeCommands;
 import frc.robot.commands.LEDCommands;
+import frc.robot.commands.ShootingCommands;
 import frc.robot.subsystems.Subsystems;
 import frc.robot.util.MatchTime;
 
@@ -25,6 +28,12 @@ import frc.robot.util.MatchTime;
  * subsystems, commands, and trigger mappings) should be declared here.
  */
 public class RobotContainer {
+  
+  private final CommandXboxController manipulatorController =
+      new CommandXboxController(OperatorConstants.MANIPULATOR_CONTROLLER_PORT);
+
+  private final CommandXboxController driverController =
+      new CommandXboxController(OperatorConstants.DRIVER_CONTROLLER_PORT);
 
   @DashboardTab(title = "Operator")
   private final RobotOperator operator;
@@ -36,10 +45,6 @@ public class RobotContainer {
 
   @DashboardTab(title = "Autonomous")
   private final Autos autos = new Autos(subsystems);
-
-  // Replace with CommandPS4Controller or CommandJoystick if needed
-  private final CommandXboxController driverController =
-      new CommandXboxController(OperatorConstants.kDriverControllerPort);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -65,6 +70,8 @@ public class RobotContainer {
   private void configureBindings() {
     // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
 
+    driverController.start().onTrue(DriveCommands.resetOrientation(subsystems));
+
     new Trigger(MatchTime::isAutonomous).whileTrue(LEDCommands.autoLEDs(subsystems));
     new Trigger(MatchTime::isNearShiftChangeExcludingFinalSecond)
         .whileTrue(LEDCommands.setTransitionModeLED(subsystems));
@@ -73,6 +80,20 @@ public class RobotContainer {
     new Trigger(MatchTime::isNearEndgame)
         .whileTrue(LEDCommands.transitionToEndgameModeLED(subsystems));
     new Trigger(MatchTime::isEndgame).whileTrue(LEDCommands.endgameLED(subsystems));
+
+    manipulatorController.rightBumper().whileTrue(IntakeCommands.intake(subsystems));
+    manipulatorController.a().whileTrue(IntakeCommands.outtake(subsystems));
+
+    // Experimental, remove after shooter interpolation table is made and implemented. Up and left
+    // is increase and decrease upper shooter velocities respectively. Down and right is increase
+    // and decrease lower shooter velocities respectively.
+    manipulatorController
+        .povUp()
+        .onTrue(ShootingCommands.increaseShooterVelocityByPointTwo(subsystems));
+    manipulatorController
+        .povDown()
+        .onTrue(ShootingCommands.decreaseShooterVelocityByPointTwo(subsystems));
+    manipulatorController.back().onTrue(ShootingCommands.setShooterVelocityToSeven(subsystems));
   }
 
   /**
